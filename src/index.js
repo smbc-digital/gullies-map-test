@@ -9,6 +9,6 @@ import 'leaflet-search/dist/leaflet-search.src.js'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import * as serviceWorker from './serviceWorker'
 
-ReactDOM.render(<App/>, document.getElementById('maproot'))
+ReactDOM.render(<App/>, document.getElementById('root'))
 
 serviceWorker.unregister()
