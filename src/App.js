@@ -154,7 +154,7 @@ function App() {
   }
 
   return (
-    <div id="map" />
+    <div id='map' className={Config.Map.Class} />
   )
 }
 
