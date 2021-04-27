@@ -10,25 +10,11 @@ const gulliesActivePopup = feature => {
 
 const gulliesFaultPopup = feature => {
  const varName = getTargetUrl()
- let noOfDays = Math.floor(
-   (new Date() - new Date(feature.properties.job_entry_date)) /
-     (1000 * 3600 * 24)
- )
- let lastUpdated = Math.floor(
-   (new Date() - new Date(feature.properties.logged_date)) / (1000 * 3600 * 24)
- )
- const defaultMessage = noOfDays
-   ? `A fault with this gully was reported ${noOfDays} days ago`
-   : 'A fault with this gully was reported'
- const showLastUpdated = lastUpdated
-   ? `<div class="last-updated">Last updated ${lastUpdated} days ago</div>`
-   : ''
 
- return `<div class="item"><i class="tag fa fa-map-marker"></i><p class="title">Location </p><p class="info">${feature.properties.street}</p></div><hr>
-    <div class="item"><i class="tag fa fa-tag"></i><p class="title">Number on grid </p><p class="info">${feature.properties.central_asset_id}</p></div>
-    <div class= "message-fault">${defaultMessage}</div>
-    <a class="button-primary" href="${varName}/track-a-report/details/${feature.properties.ext_system_ref}">View reported fault</a>
-    ${showLastUpdated}`
+ return `<div class="item"><i class="tag fa fa-map-marker"></i><p class="title">Location </p><p class="info">${feature.properties.street}</p></div>
+    <div class= "message-fault">A blocked drain has already been reported</div><hr>
+    <a class="button-primary" href="${varName}/track-a-report/details/${feature.properties.ext_system_ref}">View this report</a>
+    <a class="button-primary" href="https://www.stockport.gov.uk/">Go to the homepage</a>`
 
 }
 

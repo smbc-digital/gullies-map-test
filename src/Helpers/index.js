@@ -25,7 +25,7 @@ const generateTargetUrl = () => {
     {
         return  'https://stage-dts.smbcdigital.net'
     }
-    else if (window.location.hostname.includes('prod'))
+    else 
     {
         return  'https://myaccount.stockport.gov.uk'
     }
